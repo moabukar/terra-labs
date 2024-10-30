@@ -29,3 +29,16 @@ terragrunt destroy
 
 - Modify cidr_block and vpc_name in the environment-specific terragrunt.hcl files to change configurations per environment.
 - Extend the module to include other resources like subnets, route tables, etc., as practice.
+
+
+## Terratest
+
+```sh
+cd terratest
+
+go mod init github.com/moabukar/terra-labs/terra/test
+go get github.com/gruntwork-io/terratest/modules/terraform
+go get github.com/stretchr/testify/assert
+
+go test -v
+```
