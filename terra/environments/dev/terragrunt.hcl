@@ -1,7 +1,7 @@
 remote_state {
   backend = "s3"
   config = {
-    bucket         = "tfstate"
+    bucket         = "dev-tfstate"
     key            = "dev/terraform.tfstate"
     region         = "eu-west-1"
     encrypt        = true
@@ -13,7 +13,7 @@ generate "provider" {
   if_exists = "overwrite_terragrunt"
   contents  = <<EOF
 provider "aws" {
-  region = "us-east-1"  # Region for dev environment
+  region = "eu-west-1"
 }
 EOF
 }
